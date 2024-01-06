@@ -1,0 +1,14 @@
+﻿@using MVCCV.Models.Entity
+@model List<TblSocialMedia>
+
+<div class="social-icons">
+    @foreach (var item in Model)
+    {
+        <a class="social-icon" target="_blank" href="@item.Link">
+            <i class="@item.Icon"></i>
+        </a>
+    }
+
+</div>
+
+

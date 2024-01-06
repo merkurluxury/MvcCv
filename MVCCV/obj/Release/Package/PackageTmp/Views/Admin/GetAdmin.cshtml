@@ -1,0 +1,18 @@
+﻿@model MVCCV.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "GetExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Admin Güncelleme Sayfası</h2>
+<br />
+<form method="post" class="form-group">
+    @Html.Label("Admin Kullanıcı Adı ")
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Admin Şifre  ")
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+<br />
+
+    <button class="btn btn-info">Güncelle</button>
+</form>

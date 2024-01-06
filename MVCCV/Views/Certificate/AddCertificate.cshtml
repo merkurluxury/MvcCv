@@ -1,0 +1,20 @@
+﻿@model MVCCV.Models.Entity.TblCertificates
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Yetenek Ekleme Sayfası</h4>
+<br />
+<form method="post" >
+
+    @Html.Label("Sertifika Detay")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alınma Tarihi")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>

@@ -1,0 +1,21 @@
+﻿@model MVCCV.Models.Entity.TblExpriences
+@{
+    ViewBag.Title = "GetExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Deneyim Güncelleme Sayfası</h2>
+<br />
+<form method="post" class="form-group">
+    @Html.Label("Deneyim Başlık ")
+    @Html.TextBoxFor(x => x.Title, new { @class="form-control"})
+    @Html.Label("Alt Başlık  ")
+    @Html.TextBoxFor(x => x.Subtitle, new { @class="form-control"})
+    @Html.Label(" Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class="form-control"})
+    @Html.Label("Açıklama ")
+    @Html.TextAreaFor(x => x.Description, new { @class="form-control"})
+    
+
+    <button class="btn btn-info">Güncelle</button>
+</form>

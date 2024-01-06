@@ -1,0 +1,21 @@
+﻿@model MVCCV.Models.Entity.TblCertificates
+@{
+    ViewBag.Title = "GetSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Sertifika Güncelleme Sayfası</h2>
+<br />
+
+<form method="post" class="form-group">
+    @Html.Label("Sertifika Açıklaması ")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+
+
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+    <a href="/Certificate/DeleteCertificate/@ViewBag.d1" class="btn btn-danger">Sertifikayı Sil</a>
+</form>

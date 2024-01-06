@@ -1,0 +1,35 @@
+﻿@using MVCCV.Models.Entity
+@model List<TblReferences>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Referans Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ad Soyad</th>
+        <th>Ünvan</th>
+        <th>Telefon</th>
+        
+        <th>Sil</th>
+        <th>Düzenle</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Title</td>
+            <td>@item.Phone</td>
+            
+            <td><a href="/References/DeleteReference/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/References/GetReference/@item.Id" class="btn btn-success">Düzenle</a></td>
+        </tr>
+    }
+</table>
+<a href="/References/AddReference" class="btn btn-primary">Yeni Ekle</a>
+

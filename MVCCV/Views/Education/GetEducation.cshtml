@@ -1,0 +1,24 @@
+﻿@model MVCCV.Models.Entity.TblEducation
+@{
+    ViewBag.Title = "GetEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Eğitim Düzenleme Ekranı</h2>
+
+<form method="post" class="form-group">
+    @Html.Label("Okul ismi İsmi ")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.Label("Fakülte İsmi")
+    @Html.TextBoxFor(x => x.Subtitle1, new { @class = "form-control" })
+    @Html.Label("Bölüm")
+    @Html.TextBoxFor(x => x.Subtitle2, new { @class = "form-control" })
+    @Html.Label("Mezuniyet Tarihi")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    @Html.Label("Genel Not Ortalama")
+    @Html.TextBoxFor(x => x.GradeAverage, new { @class = "form-control" })
+
+
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>

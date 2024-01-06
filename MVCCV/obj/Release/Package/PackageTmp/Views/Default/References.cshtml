@@ -1,0 +1,18 @@
+﻿@using MVCCV.Models.Entity
+@model List<TblReferences>
+<div class="resume-section-content">
+    <h2 class="mb-5">Referanslar</h2>
+    @foreach (var item in Model)
+    {
+<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+    <div class="flex-grow-1">
+        <h3 class="mb-0">@item.NameSurname</h3>
+        <div class="subheading mb-3">@item.Title</div>
+        <div>@item.Phone</div>
+        
+    </div>
+   
+</div>}
+
+</div>
+

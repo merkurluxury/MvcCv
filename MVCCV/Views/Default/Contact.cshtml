@@ -1,0 +1,28 @@
+﻿@using MVCCV.Models.Entity
+@model List<TblContact>
+
+
+
+    <div class="resume-section-content">
+    <h2 class="mb-5">Contact Me</h2>
+    <form method="post">
+        <label> Ad Soyad</label>
+        <input type="text" name="NameSurname" value="" class="form-control" />
+
+        <label> Mail</label>
+        <input type="text" name="Mail" value="" class="form-control" />
+
+        <label> Subject</label>
+        <input type="text" name="Subject" value="" class="form-control" />
+
+        <label>Message</label>
+        @*<input type="text" name="Message" value="" class="form-control" />*@
+        <textarea name="Message" class="form-control" maxlength="400" ></textarea>
+        
+
+        <button class="btn btn-info" style="margin-top:20px;">Send Message</button>
+    </form>
+    
+</div>
+
+
